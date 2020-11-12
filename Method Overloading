@@ -1,0 +1,58 @@
+
+package constractor;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Md Torikul Islam
+ *
+ */
+
+class Box {
+
+  double a,b,c,volume,triangle;   
+    
+  Box( double x)  // 1st constructor (1 value pass)
+    {
+      a=x;
+      volume=a*a*a;    // Value Inisalized 
+      
+      System.out.println("The Volume is " +volume);
+    }
+  
+     Box( double y, double z)  // 2nd constructor (2 value pass) must different
+      {
+        b=y;    // Value Inisalized 
+        c=z;    // Value Inisalized 
+        triangle=.5*b*c;
+        System.out.println("The Area is "+triangle);
+      }
+    }
+
+
+  public class Constractor {
+
+    public static void main(String[] args) {
+     
+    System.out.println("Enter a Value for Volume : ");
+    
+    Scanner input= new Scanner(System.in);
+    
+    double a=input.nextDouble();
+    
+    System.out.println("Enter Wide : ");
+    
+    double b=input.nextDouble();
+    
+    System.out.println("Enter Hieght : ");
+   
+    double c=input.nextDouble();
+     
+    Box obj  = new Box(a);
+    Box obj2 = new Box(b,c);
+        
+        
+   }
+    
+}
